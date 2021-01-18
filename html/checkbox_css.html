@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.default {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+ 
+.default::before {
+	content: '';
+	position: absolute;
+	top: -1px;
+	left: -1px;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	color: white;
+	font-size: 15px;
+	background-color: #999;
+	border-radius: 4px;
+}
+
+
+.default:checked::before {
+	color: white;
+	background-color: #26D09F;
+}
+</style>
+<body>
+    <label><input type="checkbox" class="default"><span>Inder ORT</span></label>
+</body>
+</html>
