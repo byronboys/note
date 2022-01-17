@@ -17,3 +17,13 @@ func sum(x, y int) (total int, error) {
 
 // 如果有多个返回值，有1个命名了，必须加括号并且全部命名
 ```
+
+4. map元素取地址
+```go
+var data = make(map[string]string)
+fmt.Println(&data["key"])
+
+// 编译会报错，无法对map的 key 和 value取地址
+// 就算通过 hack 的方式 unsafe 取到地址保存了也是没有用
+// 因为一扩容，地址就会变，所以没有意义
+```
